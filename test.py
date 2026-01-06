@@ -24,8 +24,8 @@ while True:
 
     print("1: attack")
 
-    INPUTS = int(input("Enter an option:"))
+    Enter = int(input("Enter an option:"))
 
-    if I == 1:
+    if Enter == 1:
         Game_Input = input("Input a spell:")
         Morph.atk()
