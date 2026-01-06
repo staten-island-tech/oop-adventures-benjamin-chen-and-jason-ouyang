@@ -18,11 +18,21 @@ class wizard:
         self.range -= 15
         self.defense += 35
 
-    def ramge_buff(self):
+    def range_buff(self):
         self.atk -= 34
         self.range += 100
         self.defense -= 10
 
 Wizard = wizard("Wizard", 35, 15, 25, 100)
 
-user_input 
+while True:
+
+    print("1: atk")
+    print("2: defense")
+    print("3: buff")
+
+    Inputs = int(input("Input 1, 2, or 3:"))
+
+    if Inputs == 1:
+        user_input = input("Input a spell.")
+        Wizard.attack()
