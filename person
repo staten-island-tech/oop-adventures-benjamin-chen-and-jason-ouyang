@@ -5,9 +5,9 @@ class Person:
         self.health = health
         self.inventory = inventory
 
-    def attack(self):
+    def attack(self, atk):
         print(f"{self.name} attacked")
-        self.atk == 30
+        self.atk == atk
 
     def heal(self):
         print(f"{self.name} healed")
