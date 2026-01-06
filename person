@@ -1,18 +1,16 @@
 class Person:
-    def __init__(self, name, atk, defense, range, health, energy, hunger, inventory)
+    def __init__(self, name, atk, health, inventory):
         self.name = name
         self.atk = atk
-        self.defense = defense
-        self.range = range
         self.health = health
-        self.energy = energy
-        self.hunger = hunger
         self.inventory = inventory
 
     def attack(self):
+        print(f"{self.name} attacked")
         self.atk == 30
 
-    def eat(self, health, energy, hunger)
-        self.
-        
-You = Person("You", 20, 40, 10, 50, 50, 50)
+    def heal(self):
+        print(f"{self.name} healed")
+        self._health += 20
+
+You = Person("You", 30, 100)
