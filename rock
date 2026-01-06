@@ -1,0 +1,11 @@
+class Rock:
+    def __init__(name, atk, health):
+        self.name = name
+        self.atk = atk
+        self.health = health
+    
+    def attack(self):
+        print(f"{self.name} attacked")
+        self.atk == 10
+    
+rock = Rock("rock", 10, 25)
