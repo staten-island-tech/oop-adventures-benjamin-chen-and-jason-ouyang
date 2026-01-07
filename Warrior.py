@@ -51,3 +51,4 @@ while True:
     if Warrior_options == 3:
         Warrior.Lethal_attack()
         Warrior.range -= 10
+        Warrior.atk -= 75
