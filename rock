@@ -1,5 +1,4 @@
 class Rock:
-    self = True
     def __init__(self, name, atk, health):
         self.name = name
         self.atk = atk
@@ -8,12 +7,12 @@ class Rock:
     def attack(self, atk):
         print(f"{self.name} attacked")
         self.atk = atk
-    
-    def die(self, health):
-        if health <= 0:
-            print("rock dissappeared")
-            self = False
-    
+        
 rock = Rock("rock", 10, 25)
 
 golem = Rock("golem", 20, 50)
+
+while True:
+    if Rock.health <= 0:
+        print("enemy dissappeared")
+
