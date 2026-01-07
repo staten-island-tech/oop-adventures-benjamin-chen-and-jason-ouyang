@@ -9,3 +9,5 @@ class Rock:
         self.atk = atk
     
 rock = Rock("rock", 10, 25)
+
+golem = Rock("golem", 20, 50)
