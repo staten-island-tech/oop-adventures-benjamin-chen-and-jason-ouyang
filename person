@@ -16,9 +16,9 @@ class Person:
     def action(self):
         action = int(input("what do you do?"))
         if action == 1:
-            Person.attack
+            self.attack
         elif action == 2:
-            Person.heal
+            self.heal
     
 You = Person("You", 30, 100)
 
