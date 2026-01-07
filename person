@@ -1,5 +1,4 @@
 class Person:
-    self = True
     def __init__(self, name, atk, health, inventory):
         self.name = name
         self.atk = atk
@@ -13,10 +12,11 @@ class Person:
     def heal(self):
         print(f"{self.name} healed")
         self._health += 20
-    
-    def die(self, health):
-        if health <= 0:
-            print("you died")
-            self = False
 
 You = Person("You", 30, 100)
+    
+while True:
+    if Person.health <= 0:
+        print("you died")
+        Person = False
+
