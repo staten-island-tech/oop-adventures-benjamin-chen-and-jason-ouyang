@@ -1,0 +1,42 @@
+class warrior: 
+    def __init__(self, name, atk, range, hp):
+        self.name = name
+        self.atk = atk
+        self.range = range
+        self.hp = hp
+
+    def status(self):
+        print(f"Name: {self.name}")
+        print(f"Attack: {self.atk} dmg: When HP (Hit_point) falls below 50, {self.name} inflicts {self.atk*2} dmg.")
+        print(f"Range: {self.range}")
+        print(f"Health: {self.hp}")
+
+    def basic_attack(self):
+        if self.hp <= 50:
+            self.atk += 25
+            print(f"{self.name} went on a rampage dealing {self.atk*2} dmg: [doubled dmg].")
+        elif self.hp >= 50:
+            self.atk == 25
+            self.hp -= 5
+            print(f"{self.name} swung his sword dealing {self.atk} dmg: [weak impact].")
+
+    def Lethal_attack(self):
+
+
+Warrior = warrior("Warrior", 25, 5, 150)
+
+while True:
+
+    if Warrior.hp <= 0:
+        print(f"Warrior has died, hitpoint > 0, [ENDED]:")
+        break
+
+    print("1: basic_attack")
+    print("2: Show_Status")
+
+    Warrior_options = int(input("Input an option:"))
+
+    if Warrior_options == 1:
+        Warrior.basic_attack()
+    if Warrior_options == 2:
+        Warrior.status()
