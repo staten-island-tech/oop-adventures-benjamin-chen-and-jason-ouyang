@@ -13,8 +13,15 @@ class Person:
         print(f"{self.name} healed")
         self._health += 20
 
-You = Person("You", 30, 100)
+    def action(self):
+        action = int(input("what do you do?"))
+        if action == 1:
+            Person.attack
+        elif action == 2:
+            Person.heal
     
+You = Person("You", 30, 100)
+
 while True:
     if Person.health <= 0:
         print("you died")
