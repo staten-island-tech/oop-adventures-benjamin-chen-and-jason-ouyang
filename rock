@@ -1,0 +1,27 @@
+class Rock:
+    def __init__(self, name, atk, health):
+        self.name = name
+        self.atk = atk
+        self.health = health
+    
+    def attack(self, atk):
+        print(f"{self.name} attacked")
+        self.atk = atk
+    
+    def status(self):
+        print(f"Name: {self.name}")
+        print(f"Attack DMG: {self.atk}")
+        print(f"Health: {self.health}")
+        
+rock = Rock("rock", 10, 25)
+
+golem = Rock("golem", 20, 50)
+
+while True:
+    Rock.attack
+    if Rock.health <= 0:
+        print("enemy dissappeared")
+        break
+
+    
+
