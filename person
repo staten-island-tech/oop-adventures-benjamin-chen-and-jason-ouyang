@@ -1,0 +1,33 @@
+class Person:
+    def __init__(self, name, atk, health, inventory):
+        self.name = name
+        self.atk = atk
+        self.health = health
+        self.inventory = inventory
+
+    def pick_up(self, item):
+        self.inventory.append(item)
+        print(self.inventory)
+
+    def attack(self, atk):
+        print(f"{self.name} attacked")
+        self.atk == atk
+
+    def heal(self):
+        print(f"{self.name} healed")
+        self._health += 20
+
+    def action(self):
+        action = int(input("what do you do?"))
+        if action == 1:
+            self.attack
+        elif action == 2:
+            self.heal
+    
+You = Person("You", 30, 100)
+
+while True:
+    if Person.health <= 0:
+        print("you died")
+        Person = False
+
