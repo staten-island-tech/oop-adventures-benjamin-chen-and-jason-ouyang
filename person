@@ -30,4 +30,3 @@ while True:
     if Person.health <= 0:
         print("you died")
         Person = False
-
