@@ -24,7 +24,7 @@ class BOSS:
         if self.hp >= 0:
             print(f"{self.name} has died...")
 
-Morph = BOSS("Morph", 50, 50, 500)
+Morph = BOSS("Morph", 50, 50, 500)     #Morph = BOSS("Morph", 50, 50, 500)
 
 while True:
 
