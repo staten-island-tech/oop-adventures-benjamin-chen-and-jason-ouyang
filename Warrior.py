@@ -1,14 +1,12 @@
 class warrior: 
-    def __init__(self, name, atk, range, hp):
+    def __init__(self, name, atk, hp):
         self.name = name
         self.atk = atk
-        self.range = range
         self.hp = hp
 
     def status(self):
         print(f"Name: {self.name}")
         print(f"Attack: {self.atk} dmg: When HP (Hit_point) falls below 50, {self.name} inflicts {self.atk*2} dmg.")
-        print(f"Range: {self.range}")
         print(f"Health: {self.hp}")
 
     def half_status(self):
@@ -27,10 +25,9 @@ class warrior:
     def Lethal_attack(self):
         self.hp -= 25
         self.atk += 75
-        self.range += 10
         print(f"{self.name} charged a Lethal_attack, dealing {self.atk} dmg and is left with {self.hp}: [impactful].")
 
-Warrior = warrior("Warrior", 25, 5, 150)
+Warrior = warrior("Warrior", 25, 150)
 
 while True:
 
@@ -50,5 +47,4 @@ while True:
         Warrior.status()
     if Warrior_options == 3:
         Warrior.Lethal_attack()
-        Warrior.range -= 10
         Warrior.atk -= 75
