@@ -1,8 +1,13 @@
 class Person:
-    def __init__(self, name, atk, health):
+    def __init__(self, name, atk, health, inventory):
         self.name = name
         self.atk = atk
         self.health = health
+        self.inventory = inventory
+
+    def pick_up(self, item):
+        self.inventory.append(item)
+        print(self.inventory)
 
     def attack(self, atk):
         print(f"{self.name} attacked")
