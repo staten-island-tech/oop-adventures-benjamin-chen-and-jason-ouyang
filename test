@@ -193,4 +193,7 @@ while True:
     if Inputs_input == 1:
         Game_Input = input("Input a spell:")
         Morph.attack()
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
