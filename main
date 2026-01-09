@@ -1,8 +1,6 @@
 
-
-
-player = Person("You", 30, 100)
-enemy = (rock, golem, goblin, boss)
+player = "You"
+enemy = "rock", "golem", "rock", "goblin""
 
 while player.alive() and enemy.alive():
     print("1. Attack")
