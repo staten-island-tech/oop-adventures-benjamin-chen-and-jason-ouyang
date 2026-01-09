@@ -17,11 +17,5 @@ rock = Rock("rock", 10, 25)
 
 golem = Rock("golem", 20, 50)
 
-while True:
-    Rock.attack
-    if Rock.health <= 0:
-        print("enemy dissappeared")
-        break
-
     
 
