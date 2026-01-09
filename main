@@ -1,6 +1,6 @@
 
 player = "You"
-enemy = "rock", "golem", "rock", "goblin""
+enemy = "rock", "golem", "rock", "goblin"
 
 while player.alive() and enemy.alive():
     print("1. Attack")
