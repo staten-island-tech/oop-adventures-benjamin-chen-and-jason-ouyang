@@ -129,7 +129,6 @@ while True:
 
     Inputs = int(input("Input an option:"))
 
-<<<<<<< Updated upstream
     if Inputs == 1:
         user_input = input("Input a spell.")
         if Wizard.health > 0:
@@ -145,7 +144,6 @@ while True:
                 break
     elif Inputs == 2: 
         Wizard.Status()
-=======
     Warrior_options = int(input("Input an option:"))
 
     if Warrior_options == 1:
@@ -193,10 +191,3 @@ while True:
     if Inputs_input == 1:
         Game_Input = input("Input a spell:")
         Morph.attack()
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
