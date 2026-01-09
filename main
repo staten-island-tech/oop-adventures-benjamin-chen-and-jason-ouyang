@@ -18,7 +18,7 @@ while player.alive() and enemy.alive():
         enemy.attack(player)
 
     print(f"Your health: {player.health}")
-    print(f"Goblin health: {enemy.health}")
+    print(f"enemy health: {enemy.health}")
 
 if player.alive():
     print("You win!")
