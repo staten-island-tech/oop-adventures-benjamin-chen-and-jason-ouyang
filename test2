@@ -1,4 +1,3 @@
-
 class Person:
     def __init__(self, name, atk, health):
         self.name = name
@@ -8,11 +7,10 @@ class Person:
 
     def attack(self, enemy):
         enemy.health -= self.atk
-        print(f"{self.name} attack {enemy.name} ad did {self.atk} damage")
+        print(f"{self.name} attacks {enemy.name} for {self.atk} damage!")
 
     def heal(self):
-        self.health += 20
-        print(f"{self.name} healed and your health is {self.health}")
+        print(f"{self.name} heals. Health is now {self.health}")
 
     def alive(self):
         return self.health > 0
@@ -31,36 +29,52 @@ class Enemy:
     def alive(self):
         return self.health > 0
 
+enemies = [
+    Enemy("Rock", 5, 30),
+    Enemy("Golem", 10, 50),
+    Enemy("Goblin", 8, 40),
+    Enemy("Wizard", 12, 60),
+    Enemy("BOSS: Morph", 20, 120)
+]
+
 player = Person("Hero", 15, 100)
-enemy = Enemy("Rock Golem", 10, 50)
 
 print("start game")
 
+for enemy in enemies:
+    print(f"{enemy.name} appears")
 
-while player.alive() and enemy.alive():
-    print("1: attack")
-    print("2: heal")
-    print("3: status")
+    while player.alive() and enemy.alive():
+        print("1: Attack")
+        print("2: Heal")
+        print("3: Status")
 
-    action = input("Choose an action: ")
+        action = input("choose an action: ")
 
-    if action == "1":
-        player.attack(enemy)
+        if action == "1":
+            player.attack(enemy)
+        elif action == "2":
+            player.heal()
+        elif action == "3":
+            print(f"Player HP: {player.health}")
+            print(f"{enemy.name} HP: {enemy.health}")
+            continue
+        else:
+            print("not doable")
+            continue
 
-    elif action == "2":
-        player.heal()
+        if enemy.alive():
+            enemy.attack(player)
 
-    elif action == "3":
-        print(f"player health: {player.health}")
-        print(f"enemy health: {enemy.health}")
-
+    if not player.alive():
+        print("You were defeated!")
+        break
     else:
-        print("not available")
+        print(f"you defeated {enemy.name}!")
+        player.score += 1
+        print(f"score: {player.score}")
 
-    if enemy.alive():
-        enemy.attack(player)
-
-if player.alive():
-    print("yoou defeated the engmy")
-else:
-    print("you lost")
+if player.alive and not enemy.alive == "BOSS: Morph":
+    print("you won")
+    print(f"final Score: {player.score}")
+    
