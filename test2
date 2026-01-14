@@ -30,6 +30,22 @@ class Enemy:
     def alive(self):
         return self.health > 0
     
+class Goblin:
+    def __init__(self, name, atk, health):
+        self.name = name
+        self.atk = atk
+        self.health = health
+
+    def attack(self, player):
+        player.health -= self.atk
+        print(f"{self.name} attacks {player.name} for {self.atk} damage!")
+
+    def heal(self):
+        self.health += 5
+
+    def alive(self):
+        return self.health > 0
+    
 class Rock:
     def __init__(self, name, atk, health):
         self.name = name
@@ -42,12 +58,26 @@ class Rock:
     def alive(self):
         return self.health > 0
     
-
+class Boss:
+    def __init__(self, name, atk, health):
+        self.name = name
+        self.atk = atk
+        self.health = health
+    
+    def attack(self, player):
+        player.health -= self.atk
+        self.health += 1
+    
+    def alive(self):
+        return self.health > 0
 
 enemies = [
-    Enemy("NPC", 5, 50)
-    Rock("rock", 10, 25)
-    Rock("big rock", 20, 50)
+
+    Enemy("NPC", 5, 50),
+    Rock("rock", 10, 25),
+    Rock("big rock", 20, 50),
+    Goblin("goblin", 15, 45),
+    Boss("boss", 25, 200)
 
 ]
 
