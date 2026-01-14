@@ -37,6 +37,25 @@ class Enemy:
     def alive(self):
         return self.health > 0
     
+<<<<<<< HEAD
+=======
+class Goblin:
+    def __init__(self, name, atk, health):
+        self.name = name
+        self.atk = atk
+        self.health = health
+
+    def attack(self, player):
+        player.health -= self.atk
+        print(f"{self.name} attacks {player.name} for {self.atk} damage!")
+
+    def heal(self):
+        self.health += 5
+
+    def alive(self):
+        return self.health > 0
+    
+>>>>>>> 6b37b251f5f2a4a0b96bea4721ada652e357b115
 class Rock:
     def __init__(self, name, atk, health):
         self.name = name
@@ -48,6 +67,7 @@ class Rock:
     
     def alive(self):
         return self.health > 0
+<<<<<<< HEAD
 
 
 enemies = [
@@ -60,6 +80,33 @@ print("Choose a Class")
 print("1: Wizard")
 print("2: Hero")
 print("3: Warrior")
+=======
+    
+class Boss:
+    def __init__(self, name, atk, health):
+        self.name = name
+        self.atk = atk
+        self.health = health
+    
+    def attack(self, player):
+        player.health -= self.atk
+        self.health += 1
+    
+    def alive(self):
+        return self.health > 0
+
+enemies = [
+
+    Enemy("NPC", 5, 50),
+    Rock("rock", 10, 25),
+    Rock("big rock", 20, 50),
+    Goblin("goblin", 15, 45),
+    Boss("boss", 25, 200)
+
+]
+
+player = Person("You", 15, 100)
+>>>>>>> 6b37b251f5f2a4a0b96bea4721ada652e357b115
 
 user_input = int(input("Input a number:"))
 

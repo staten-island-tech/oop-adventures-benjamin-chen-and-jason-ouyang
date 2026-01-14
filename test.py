@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class BOSS:
     def __init__(self, name, atk, range, hp):
         self.atk = atk
@@ -36,6 +37,8 @@ while True:
         Game_Input = input("Input a spell:")
         Morph.attack()
 
+=======
+>>>>>>> 6b37b251f5f2a4a0b96bea4721ada652e357b115
 class wizard:
     def __init__(self, name, atk, health):
         self.name = name
@@ -80,4 +83,8 @@ while True:
                 print("Wizard has died : Game Restart :")
                 break
     elif Inputs == 2: 
+<<<<<<< HEAD
         Wizard.Status()
+=======
+        Wizard.Status()
+>>>>>>> 6b37b251f5f2a4a0b96bea4721ada652e357b115
