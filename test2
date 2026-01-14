@@ -31,11 +31,15 @@ class Enemy:
         return self.health > 0
 
 enemies = [
-    Enemy("Rock", 5, 30),
+    Warrior("warrior", 25, 150)
+    
+
+
+    """Enemy("Rock", 5, 30),
     Enemy("Golem", 10, 50),
     Enemy("Goblin", 8, 40),
     Enemy("Wizard", 12, 60),
-    Enemy("BOSS: Morph", 20, 120)
+    Enemy("BOSS: Morph", 20, 120)"""
 ]
 
 player = Person("You", 15, 100)
