@@ -29,17 +29,26 @@ class Enemy:
 
     def alive(self):
         return self.health > 0
-
-enemies = [
-    Warrior("warrior", 25, 150)
+    
+class Rock:
+    def __init__(self, name, atk, health):
+        self.name = name
+        self.atk = atk
+        self.health = health
+    
+    def attack(self, player):
+        player.health -= self.atk
+    
+    def alive(self):
+        return self.health > 0
     
 
 
-    """Enemy("Rock", 5, 30),
-    Enemy("Golem", 10, 50),
-    Enemy("Goblin", 8, 40),
-    Enemy("Wizard", 12, 60),
-    Enemy("BOSS: Morph", 20, 120)"""
+enemies = [
+
+
+
+    
 ]
 
 player = Person("You", 15, 100)
