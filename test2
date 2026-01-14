@@ -1,0 +1,147 @@
+class Person:
+    def __init__(self, name, atk, health):
+        self.name = name
+        self.atk = atk
+        self.health = health
+        self.score = 0
+
+    def attack(self, enemy):
+        enemy.health -= self.atk
+        print(f"{self.name} attacks {enemy.name} for {self.atk} damage!")
+
+    def heal(self):
+        self.health += 10
+        print(f"{self.name} heals. Health is now {self.health}")
+
+    def alive(self):
+        return self.health > 0
+    
+    def status(self):
+        print(f"{self.name}'s STATS:")
+        print(f"Name: {self.name}")
+        print(f"Atk: {self.atk}")
+        print(f"Health: {self.health}")
+        print(f"Score: {self.score}")
+
+
+class Enemy:
+    def __init__(self, name, atk, health):
+        self.name = name
+        self.atk = atk
+        self.health = health
+
+    def attack(self, player):
+        player.health -= self.atk
+        print(f"{self.name} attacks {player.name} for {self.atk} damage!")
+
+    def alive(self):
+        return self.health > 0
+    
+class Goblin:
+    def __init__(self, name, atk, health):
+        self.name = name
+        self.atk = atk
+        self.health = health
+
+    def attack(self, player):
+        player.health -= self.atk
+        print(f"{self.name} attacks {player.name} for {self.atk} damage!")
+
+    def heal(self):
+        self.health += 5
+
+    def alive(self):
+        return self.health > 0
+    
+class Rock:
+    def __init__(self, name, atk, health):
+        self.name = name
+        self.atk = atk
+        self.health = health
+    
+    def attack(self, player):
+        player.health -= self.atk
+    
+    def alive(self):
+        return self.health > 0
+    
+class Boss:
+    def __init__(self, name, atk, health):
+        self.name = name
+        self.atk = atk
+        self.health = health
+    
+    def attack(self, player):
+        player.health -= self.atk
+        self.health += 1
+    
+    def alive(self):
+        return self.health > 0
+
+enemies = [
+
+    Enemy("NPC", 5, 50),
+    Rock("rock", 10, 25),
+    Rock("big rock", 20, 50),
+    Goblin("goblin", 15, 45),
+    Boss("boss", 25, 200)
+
+]
+
+print("Choose a Class")
+print("1: Wizard")
+print("2: Hero")
+print("3: Warrior")
+
+user_input = int(input("Input a number:"))
+
+if user_input == 1:
+    player = Person("Wizard", 30, 75)
+elif user_input == 2:
+    player = Person("Hero", 15, 100)
+elif user_input == 3:
+    player = Person("Warrior", 20, 150)
+
+print(player.status())
+print("start game")
+
+for enemy in enemies:
+    print(f"{enemy.name} appears")
+
+    while player.alive() and enemy.alive():
+        print("1: Attack")
+        print("2: Heal")
+        print("3: Status")
+
+        action = input("choose an action: ")
+
+        if action == "1":
+            player.attack(enemy)
+        elif action == "2":
+            player.heal()
+        elif action == "3":
+            print(f"Player HP: {player.health}")
+            print(f"{enemy.name} HP: {enemy.health}")
+            continue
+        else:
+            print("not doable")
+            continue
+
+        if enemy.alive():
+            enemy.attack(player)
+
+    if not player.alive():
+        print("You were defeated!")
+        break
+    else:
+        print(f"you defeated {enemy.name}!")
+        player.score += 1
+        print(f"score: {player.score}")
+
+if player.alive and enemy.alive == False:
+    print("you won")
+    print(f"final Score: {player.score}")
+else:
+    print("you lost")
+    print(f"final Score: {player.score}")
+    
