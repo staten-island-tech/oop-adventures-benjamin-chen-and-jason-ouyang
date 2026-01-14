@@ -48,14 +48,13 @@ class Rock:
     
     def alive(self):
         return self.health > 0
-    
 
 
 enemies = [
-    Enemy("NPC", 5, 50)
-    Rock("rock", 10, 25)
-    Rock("big rock", 20, 50)
-    ]
+    Enemy("NPC", 5, 50),
+    Rock("rock", 10, 25),
+    Rock("big rock", 20, 50) 
+]
 
 print("Choose a Class")
 print("1: Wizard")
@@ -72,10 +71,6 @@ elif user_input == 3:
     player = Person("Warrior", 20, 150)
 
 print(player.status())
-
-player = Person("You", 15, 100)
-
-
 print("start game")
 
 for enemy in enemies:
