@@ -14,6 +14,13 @@ class Person:
 
     def alive(self):
         return self.health > 0
+    
+    def status(self):
+        print(f"{self.name}'s STATS:")
+        print(f"Name: {self.name}")
+        print(f"Atk: {self.atk}")
+        print(f"Health: {self.health}")
+        print(f"Score: {self.score}")
 
 
 class Enemy:
@@ -37,7 +44,21 @@ enemies = [
     Enemy("BOSS: Morph", 20, 120)
 ]
 
-player = Person("Hero", 15, 100)
+print("Choose a Class")
+print("1: Wizard")
+print("2: Hero")
+print("3: Warrior")
+
+user_input = int(input("Input a number:"))
+
+if user_input == 1:
+    player = Person("Wizard", 30, 75)
+elif user_input == 2:
+    player = Person("Hero", 15, 100)
+elif user_input == 3:
+    player = Person("Warrior", 15, 150)
+
+print(player.status())
 
 print("start game")
 
