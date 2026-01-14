@@ -10,6 +10,7 @@ class Person:
         print(f"{self.name} attacks {enemy.name} for {self.atk} damage!")
 
     def heal(self):
+        self.health += 10
         print(f"{self.name} heals. Health is now {self.health}")
 
     def alive(self):
@@ -74,7 +75,10 @@ for enemy in enemies:
         player.score += 1
         print(f"score: {player.score}")
 
-if player.alive and not enemy.alive == "BOSS: Morph":
+if player.alive and enemy.alive == False:
     print("you won")
+    print(f"final Score: {player.score}")
+else:
+    print("you lost")
     print(f"final Score: {player.score}")
     
