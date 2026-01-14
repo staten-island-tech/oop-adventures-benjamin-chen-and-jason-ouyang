@@ -38,7 +38,7 @@ enemies = [
     Enemy("BOSS: Morph", 20, 120)
 ]
 
-player = Person("Hero", 15, 100)
+player = Person("You", 15, 100)
 
 print("start game")
 
