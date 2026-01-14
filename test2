@@ -54,6 +54,7 @@ class Rock:
     
     def attack(self, player):
         player.health -= self.atk
+        print(f"{self.name} attacks {player.name} for {self.atk} damage!")
     
     def alive(self):
         return self.health > 0
@@ -67,6 +68,7 @@ class Boss:
     def attack(self, player):
         player.health -= self.atk
         self.health += 1
+        print(f"{self.name} attacks {player.name} for {self.atk} damage and heals 1 hp")
     
     def alive(self):
         return self.health > 0
@@ -102,10 +104,8 @@ for enemy in enemies:
         elif action == "3":
             print(f"Player HP: {player.health}")
             print(f"{enemy.name} HP: {enemy.health}")
-            continue
         else:
             print("not doable")
-            continue
 
         if enemy.alive():
             enemy.attack(player)
