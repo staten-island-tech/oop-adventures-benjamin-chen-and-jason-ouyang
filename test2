@@ -56,7 +56,7 @@ if user_input == 1:
 elif user_input == 2:
     player = Person("Hero", 15, 100)
 elif user_input == 3:
-    player = Person("Warrior", 15, 150)
+    player = Person("Warrior", 20, 150)
 
 print(player.status())
 
