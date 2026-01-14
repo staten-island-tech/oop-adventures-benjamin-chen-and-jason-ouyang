@@ -45,10 +45,10 @@ class Rock:
 
 
 enemies = [
+    Enemy("NPC", 5, 50)
+    Rock("rock", 10, 25)
+    Rock("big rock", 20, 50)
 
-
-
-    
 ]
 
 player = Person("You", 15, 100)
